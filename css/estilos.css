@@ -1,0 +1,222 @@
+/* Estilos generales de la página. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f4f7;
+    color: #252525;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado principal. */
+header {
+    padding: 25px 20px;
+    background: #394b59;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Limita el ancho del contenido y lo centra. */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Estilos de las secciones principales. */
+.formulario,
+.comunidades {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background: white;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* Organiza el campo de texto y el botón. */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo general de los botones. */
+button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 4px;
+    background: #3977a8;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2c5e87;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Mensajes debajo del formulario. */
+#form-message {
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 13px;
+}
+
+#form-message.error {
+    color: #bd3333;
+}
+
+#form-message.success {
+    color: #25804d;
+}
+
+/* Encabezado de la lista de carriles. */
+.titulo-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Distribuye las comunidades en columnas. */
+.lanes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+/* Apariencia de cada carril. */
+.lane {
+    overflow: hidden;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+/* Cabecera de cada comunidad. */
+.lane-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+    background: #e9eef2;
+}
+
+.lane-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.lane-header p {
+    margin: 5px 0 0;
+    color: #666666;
+    font-size: 12px;
+}
+
+/* Botón para quitar una comunidad. */
+.remove-lane {
+    padding: 5px 10px;
+    background: #b84a4a;
+}
+
+/* Lista de publicaciones. */
+.post-card {
+    padding: 13px;
+    border-top: 1px solid #eeeeee;
+}
+
+.post-card h4 {
+    margin: 0 0 9px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #666666;
+    font-size: 11px;
+}
+
+.post-score {
+    color: #25804d;
+}
+
+/* Enlace para abrir la publicación original. */
+.post-link {
+    display: inline-block;
+    margin-top: 9px;
+    color: #286b9c;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de carga y errores dentro de los carriles. */
+.lane-state {
+    padding: 18px 12px;
+    color: #666666;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Pie de página. */
+footer {
+    padding: 18px;
+    color: #666666;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Ajustes para pantallas pequeñas. */
+@media (max-width: 500px) {
+    main {
+        width: 94%;
+        margin-top: 18px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .titulo-lista {
+        align-items: flex-start;
+    }
+}

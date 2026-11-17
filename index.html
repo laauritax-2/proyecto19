@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis comunidades</title>
+
+    <!-- Archivo donde están los estilos. -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Archivo que controla las funciones de la página. -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado de la aplicación. -->
+    <header>
+        <h1>Mis comunidades</h1>
+    </header>
+
+    <!-- Contenido principal. -->
+    <main>
+        <!-- Formulario para agregar una comunidad. -->
+        <section class="formulario">
+            <h2>Agregar comunidad</h2>
+            <form id="add-form">
+                <input
+                    type="text"
+                    id="community-input"
+                    placeholder="Nombre de la comunidad"
+                    required
+                >
+                <button type="submit">Agregar</button>
+            </form>
+            <!-- Aquí se muestran los mensajes del formulario. -->
+            <p id="form-message">Escribe el nombre de una comunidad.</p>
+        </section>
+
+        <!-- Sección donde aparecen las comunidades agregadas. -->
+        <section class="comunidades">
+            <div class="titulo-lista">
+                <h2>Mis carriles</h2>
+                <button id="refresh-all" type="button">Actualizar</button>
+            </div>
+
+            <!-- JavaScript agrega aquí los carriles. -->
+            <div id="lanes-container" class="lanes-container"></div>
+        </section>
+    </main>
+
+    <!-- Pie de página. -->
+    <footer>
+        <p>Proyecto 19 - Cliente de comunidades</p>
+    </footer>
+</body>
+</html>
